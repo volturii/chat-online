@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prosty czat online</title>
+<style>
+    #chat-container {
+        width: 400px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-top: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    #messages {
+        list-style-type: none;
+        padding: 0;
+    }
+    #messages li {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<div id="chat-container">
+    <ul id="messages"></ul>
+    <input type="text" id="message" placeholder="Napisz wiadomość...">
+    <button onclick="sendMessage()">Wyślij</button>
+</div>
+
+<script>
+    function sendMessage() {
+        var messageInput = document.getElementById("message");
+        var message = messageInput.value;
+        if (message.trim() !== "") {
+            var messageList = document.getElementById("messages");
+            var li = document.createElement("li");
+            li.textContent = message;
+            messageList.appendChild(li);
+            messageInput.value = "";
+            messageInput.focus();
+        }
+    }
+</script>
+</body>
+</html>
