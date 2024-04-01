@@ -1,6 +1,15 @@
 {
   "dependencies": {
-    "express": "^4.19.2",
-    "socket.io": "^4.7.5"
+    "express": "^4.19.2"
+  },
+  "name": "chat",
+  "version": "1.0..0",
+  "main": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"ERROR: no test specifited\" && exit 1",
+    "start": "index.html"
   }
+  
+  
 }
